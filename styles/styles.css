@@ -200,13 +200,21 @@ body {
     padding-top: 50px;
 }
 
+@media (max-width: 817px) {
+    .bio-header {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 .bio-header {
-    /* border: 3px solid green; */
+    border: 3px solid green;
     display: flex;
 }
 
 .bio-links {
-    /* border: 3px solid yellow; */
+    border: 3px solid yellow;
     display: flex;
     justify-content: center;
     align-items: center;
