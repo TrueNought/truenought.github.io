@@ -1,99 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Roland Zhao</title>
-
-        <link rel="shortcut icon" href="assets/samoyed.png">
+        <link rel="icon" href="assets/favicon-32x32.png">
         <link rel="stylesheet" type="text/css" href="styles/styles.css">
-        <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <script src="https://kit.fontawesome.com/87cd0ce88e.js" crossorigin="anonymous"></script>
-    </head>
+</head>
 
-    <body>
-    <div class="main-container">
-        <div class="nav-bar">
-            <a href="#bio" class="nav">ABOUT ME</a>
-            <a href="#projects" class="nav">PROJECTS</a>
-            <a href="assets/Roland Zhao Resume.pdf" target="_blank" class="nav">RESUME</a>
-        </div>
-
-        <div class="home">
-            <div><h1>Hi! I'm <span class="name">Roland</span>.</h1></div>
-            <div><h2>Finance, Economics, & CS Student</h2></div>
-        </div>
-
-        <div class="links">
-            <a href="https://github.com/TrueNought" target="_blank" class="link-button" id="github"><i class="fab fa-github-square fa-2x"></i></a>
-            <a href="https://www.linkedin.com/in/rolandzhao/" target="_blank" class="link-button" id="linkedin"><i class="fab fa-linkedin fa-2x"></i></a>
-            <a href="https://www.instagram.com/rolando_roro/" target="_blank" class="link-button" id="instagram"><i class="fab fa-instagram-square fa-2x"></i></a>
-            <a href="mailto:rolandhzhao@gmail.com" class="link-button" id="email"><i class="fas fa-envelope-square fa-2x"></i></a>
-        </div>
-    </div>
-
-    <div class="bio-container test" id="bio">
-        <div><h2><span class="subsection">About Myself</span></h2></div>
-        <div class="bio test">
-            <img class="bio-photo" src="assets/profile_photo.jpg" alt="Profile Photo">
-
-            <div class="bio-text test">
-                <p>
-                    I am a second-year undergraduate student at the University of Toronto pursuing a degree in Finance, Economics, and Computer Science. My interests include software and web devlopment, as well as statistical analysis. One of my personal projects that I am currently working on is an algorithmic stock trading program written in Python. 
-                </p>
-                
-                <p>
-                    I am especially passionate about working with big data, where I am able to utilize my analytical skills to not only create novel solutions, but to also leave a tangible impact in industries. More specifically, I wish to explore the shrinking gap between business and technology, which is now smaller than ever. On campus, I serve as a finance manager in the Rotman Commerce Entrepreneurship Organization. 
-                </p>
+<body>
+    <section class="landing-container">   
+        <nav class="nav-bar">
+            <div class="nav-title"><h1 id="nav-name">Roland Zhao</h1></div>
+            <a href="#" class="toggle-button">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="assets/Roland Zhao Resume.pdf" target="_blank">Resume</a></li>
+              </ul>
             </div>
-        </div>        
-    </div>
+        </nav>
 
-    <div class="project-container" id="projects">
-        <div><h2><span class="subsection">Projects</span></h2></div>
-
-        <div class="wrap-collapsible">
-            <input id="collapsible1" class="toggle" type="checkbox">
-            <label for="collapsible1" class="lbl-toggle">Project 1</label>
-            <div class="collapsible-content">
-                <div class="project-desc">
+        <div class="canvas-wrap">
+            <canvas id="canvas"></canvas>
+            <div class="canvas-overlay">
+                <div id="text">
+                    <p id="landing-message">Hello! I'm <span class="name">Roland</span>.</p>
+                </div>
+                <div id="animated-text-container">
+                    <div id="animated-text">></div><div id="cursor"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="bio-container" id="about">
+        <div class="bio-header">
+            <h2 id="bio-title">About Me</h2>
+            <div class="bio-links">
+                <ul>
+                    <li><a href="https://github.com/TrueNought" target="_blank" class="link-button" id="github"><i class="fab fa-github-square fa-2x" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/rolandzhao/" target="_blank" class="link-button" id="linkedin"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i></a></li>
+                    <li><a href="mailto:rolandhzhao@gmail.com" class="link-button" id="email"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i></a></li>
+                    <li><a href="assets/Roland Zhao Resume.pdf" target="_blank" class="link-button" id="resume"><i class="far fa-file fa-2x" aria-hidden="true"></i></a></li>
+                  </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="col-bio-photo">
+                <div class="bio-photo">
+                    <img id="bio-pic" src="assets/profile_photo.jpg" alt="Profile Photo">
+                </div>
+            </div>
+            <div class="col" id="col-bio-text">
+                <div class="bio-text">
+                    <!-- <h2><span id="bio-title">About Me</span></h2> -->
+                    
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non consectetur a erat nam at lectus urna duis convallis. Eget mauris pharetra et ultrices neque ornare. Pharetra pharetra massa massa ultricies mi. Vulputate eu scelerisque felis imperdiet proin. Eget gravida cum sociis natoque penatibus et magnis dis parturient. Erat imperdiet sed euismod nisi porta. Scelerisque eu ultrices vitae auctor eu augue ut. Etiam erat velit scelerisque in dictum non consectetur a. Semper auctor neque vitae tempus quam pellentesque. Vestibulum lorem sed risus ultricies tristique. Amet luctus venenatis lectus magna. Sollicitudin aliquam ultrices sagittis orci a scelerisque. Accumsan sit amet nulla facilisi.
+                        I am a third-year undergraduate student at the <span class="bio-text-coloured">University of Toronto</span> currently pursuing a degree in Finance, Economics, and Computer Science. On campus, I serve as a Finance Manager in the <a href="https://www.rotmanceo.com" class="bio-text-coloured">Rotman Commerce Entrepreneurship Organization</a>.
+                    </p>
+                    
+                    <p>
+                        My interests include software and web development as well as statistical analysis, having experience primarily with <span class="bio-text-coloured">Python, Java, JavaScript, Node.js, and R.</span> I also actively invest in the stock market with the help of technical and fundamental analysis.
+                    </p>
+
+                    <p>
+                        I am especially passionate about working with big data, where I am able to utilize my analytical skills to not only create novel solutions, but to also leave a tangible impact in industries. More specifically, I wish to explore the shrinking gap between finance and technology, which is now smaller than ever.  
+                    </p>
+
+                    <p>
+                        Outside of acedemia and work, I enjoy playing ultimate frisbee, going to the gym, reading books, and gaming.
+                    </p>
+
+                    <p>
+                        Feel free to reach out if you would like to have a (virtual) coffee chat! I'm currently searching for Financial Analyst or Software Development internship opportunities in Vancouver and Toronto.
                     </p>
                 </div>
-            </div>    
+            </div>
         </div>
+    </section> 
 
-        <div class="wrap-collapsible">
-            <input id="collapsible2" class="toggle" type="checkbox">
-            <label for="collapsible2" class="lbl-toggle">Project 2</label>
-            <div class="collapsible-content">
-                <div class="project-desc">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non consectetur a erat nam at lectus urna duis convallis. Eget mauris pharetra et ultrices neque ornare. Pharetra pharetra massa massa ultricies mi. Vulputate eu scelerisque felis imperdiet proin. Eget gravida cum sociis natoque penatibus et magnis dis parturient. Erat imperdiet sed euismod nisi porta. Scelerisque eu ultrices vitae auctor eu augue ut. Etiam erat velit scelerisque in dictum non consectetur a. Semper auctor neque vitae tempus quam pellentesque. Vestibulum lorem sed risus ultricies tristique. Amet luctus venenatis lectus magna. Sollicitudin aliquam ultrices sagittis orci a scelerisque. Accumsan sit amet nulla facilisi.
-                    </p>
-                </div>
-            </div>    
+    <!-- <div class="project-container">
+        <div><h2><span class="subsection">Projects</span></h2>
+            <div class="project-grid">
+                <div class="project-1">Project 1</div>
+                <div class="project-2">Project 2</div>
+                <div class="project-3">Project 3</div>
+                <div class="project-4">Project 4</div>
+                <div class="project-5">Project 5</div>
+            </div>
         </div>
-
-        <div class="wrap-collapsible">
-            <input id="collapsible3" class="toggle" type="checkbox">
-            <label for="collapsible3" class="lbl-toggle">Project 3</label>
-            <div class="collapsible-content">
-                <div class="project-desc">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non consectetur a erat nam at lectus urna duis convallis. Eget mauris pharetra et ultrices neque ornare. Pharetra pharetra massa massa ultricies mi. Vulputate eu scelerisque felis imperdiet proin. Eget gravida cum sociis natoque penatibus et magnis dis parturient. Erat imperdiet sed euismod nisi porta. Scelerisque eu ultrices vitae auctor eu augue ut. Etiam erat velit scelerisque in dictum non consectetur a. Semper auctor neque vitae tempus quam pellentesque. Vestibulum lorem sed risus ultricies tristique. Amet luctus venenatis lectus magna. Sollicitudin aliquam ultrices sagittis orci a scelerisque. Accumsan sit amet nulla facilisi.
-                    </p>
-                </div>
-            </div>    
-        </div>
-    </div>
-
+    </div> -->
     <footer>
-        <p> Roland Zhao &copy; 2020</p>
+        <p> Coded From Scratch With ❤ | Roland Zhao &copy; 2020</p>
     </footer>
   
     <script src="scripts/main.js"></script>
-    </body>
+</body>
 </html>
