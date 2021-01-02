@@ -198,6 +198,7 @@ body {
     justify-content: center;
     flex-direction: column;
     padding-top: 50px;
+    padding-bottom: 25px;
 }
 
 .bio-links ul {
