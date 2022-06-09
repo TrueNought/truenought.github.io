@@ -188,9 +188,15 @@ body {
     color: white;
 }
 
+@media screen and (max-width: 615px) {
+    #cursor {
+        display: none!important;
+    }
+}
+
 /* ----------------------BIO CONTAINER---------------------- */
 
-.bio-container {
+.bio-container, .work-container {
     /* border: 3px solid purple; */
     height: auto;
     display: flex;
@@ -205,7 +211,7 @@ body {
     padding-inline-start: 0;
 }
 
-.bio-header {
+.bio-header, .work-header {
     /* border: 3px solid green; */
     display: flex;
 }
@@ -307,7 +313,7 @@ p {
     font-size: 20px;
 }
 
-#bio-title {
+#bio-title, #work-title {
     font-size: 45px;
     font-weight: 700;
 }
@@ -315,6 +321,85 @@ p {
 .bio-text-coloured {
     color: #2587bc;
     text-decoration: none;
+}
+
+/* ----------------------EXPERIENCE CONTAINER---------------------- */
+
+.collapsible {
+    background-color: #0a5e8b;
+    color: white;
+    cursor: pointer;
+    width: 60%;
+    border: none;
+    outline: none;
+    font-size: 30px;
+}
+  
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* .active {
+    background-color: #2587bc;
+} */
+
+/* Style the collapsible content. Note: hidden by default */
+.collapsible-content {
+    background-color: #0a5e8b;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    width: 55%;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.collapsible {
+    width: 55%;
+    height: 30%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+.work-info {
+    display: flex;
+    position: relative;
+    /* border: 2px solid green; */
+    align-items: center;
+}
+
+.work-header {
+    margin-top: 12px;
+    margin-left: 20px;
+    /* border: 2px solid pink; */
+}
+
+.work-date {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    font-size: 16px;
+    color: #272523;
+}
+
+.work-org {
+    /* border: 2px solid red; */
+    text-align: left;
+}
+
+.work-title {
+    /* border: 2px solid blue; */
+    text-align: left;
+    font-size: 18px;
+    color: #272523;
+    padding-top: 0.5rem;
+}
+
+.work-logos {
+    width: 4rem;
+    height: 4rem;
+    padding-right: 1rem;
+}
+
+.work-description {
+    padding: 0 2rem 1rem 2rem;
 }
 
 footer {

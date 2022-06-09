@@ -224,3 +224,21 @@ function Delete() {
 
 // Start typing animation when site is loaded
 _INTERVAL_VAL = setInterval(Type, 100);
+
+/* ----------------------COLLAPSIBLE ANIMATION---------------------- */
+
+var collection = document.getElementsByClassName("collapsible");
+
+for (var i = 0; i < collection.length; i++) {
+    collection[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+            this.style.borderRadius = "1rem";
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            this.style.borderRadius = "1rem 1rem 0 0";
+        }
+  });
+} 
